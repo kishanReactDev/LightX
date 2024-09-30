@@ -2,10 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-.bg-image::before{
+.bg-image::before {
     content: '';
-    background: url('../public/images/001.webp');
+    background: url('../public/images/left-shadow.svg') left/cover no-repeat ;
     position: absolute;
-    top:0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.47;
+    top: 0;
     left: 0;
+    z-index: -1;
 }
