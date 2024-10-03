@@ -1,4 +1,5 @@
 'use client'
+import Image from "next/image";
 import { useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
 const Navbar = () => {
@@ -14,21 +15,24 @@ const Navbar = () => {
   }
   return (
     <>
+
       <div className='box-border h-[73px]  bg-[white] bg-opacity-95 backdrop-blur-[6px]
      px-[12px] sticky top-0 z-20 ' >
         <div className=" h-full m-auto flex items-center justify-between ">
 
           <div className="flex items-center">
-            <div className="">
-              <img src="/images/logo.png" alt="" className='w-[104px] h-[40px]' />
+            <div className="w-[104px] h-[40px] relative">
+              <Image src='/images/logo.png' alt="Logo" layout="fill" />
+              {/* <img src="/images/logo.png" alt="Logo" className="w-[104px] h-[40px]" /> */}
             </div>
+            
 
             <div className="h-[73px] text-[14px] font-semibold ml-[40px] sm:hidden md:hidden">
               <ul className='flex items-center justify-center h-full gap-5 text-black     '>
                 <li>AI Tools <FaChevronDown className='inline ml-1' /></li>
                 <li>Editor Tools<FaChevronDown className='inline ml-1' /></li>
                 <li>Design</li>
-                <li className='min-w-[54px] flex gap-1 items-center justify-center'>API <img className='inline' src="/images/newbadge.svg" alt="new" /></li>
+                <li className='min-w-[54px] flex gap-1 items-center justify-center'>API <Image src='/images/newbadge.svg' alt="new" width={30} height={30} /></li>
                 <li>Blog</li>
                 <li>Pricing</li>
               </ul>
@@ -63,7 +67,7 @@ const Navbar = () => {
       <div className={`w-[210px] fixed  overflow-y-auto scroll-smooth bg-[#30313c] transition-all duration-[300ms] ${isOpen ? 'top-0' : 'top-[-600px]'}  right-0  z-40 pb-[25px]`}>
 
         <div className="h-[42px] pl-[8px] w-full" >
-          <img onClick={handleClose} src="/images/close.svg" alt="close" className="h-full w-[30px]" />
+          <Image onClick={handleClose} src='/images/close.svg' alt="close" width={30} height={30} />
         </div>
 
 
@@ -82,7 +86,7 @@ const Navbar = () => {
           <li >AI Tools <FaChevronDown className='inline ml-1' /></li>
           <li>Editor Tools<FaChevronDown className='inline ml-1' /></li>
           <li>Design</li>
-          <li className='min-w-[54px] '>API <img className='inline' src="/images/newbadge.svg" alt="new" /></li>
+          <li className='min-w-[54px] flex items-center gap-[5px]'>API  <Image src='/images/newbadge.svg' className="inline" alt="new" width={28} height={28} /></li>
           <li>Blog</li>
           <li>Pricing</li>
         </ul>

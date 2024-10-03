@@ -1,6 +1,11 @@
+'use client'
+import { useModalContext } from '@/contextApi/modalContext'
+import Image from 'next/image'
 import React from 'react'
 
+
 const ProffetionalPicture = () => {
+    const { handleOpen } = useModalContext()
     return (
         <>
 
@@ -24,15 +29,14 @@ const ProffetionalPicture = () => {
                         </div>
 
                         <div className=" h-[48px] mt-[40px]">
-                            <button className=' min-h-[48px] border h-[27px] bg-[#626adf] text-white border-solid border-[#626ADF] px-[24px] py-[9.6px] leading-[1.5] rounded-[12px] text-[16px]  font-semibold'>Upload image</button>
+                            <button onClick={handleOpen} className=' min-h-[48px] border h-[27px] bg-[#626adf] text-white border-solid border-[#626ADF] px-[24px] py-[9.6px] leading-[1.5] rounded-[12px] text-[16px]  font-semibold'>Upload image</button>
                         </div>
                     </div>
                     <div className="w-[36%] md:w-[50%] sm:w-[70%] flex items-center justify-center ">
+                        {/* <Image src="/images/profile-1.webp" alt="picture" width='100%' height={'100%'} /> */}
                         <img src="/images/profile-1.webp" alt="" className='' />
                     </div>
                 </div>
-
-
 
                 <div className="w-[95%] sm:w-full  flex flex-row-reverse justify-center sm:items-center sm:flex-col-reverse gap-[60px] pb-[80px]">
                     <div className="w-[40%] md:w-[50%] md:ml-2 sm:w-[90%]  flex justify-center flex-col">
@@ -46,7 +50,7 @@ const ProffetionalPicture = () => {
                         </div>
 
                         <div className=" h-[48px] mt-[40px]">
-                            <button className=' min-h-[48px] border h-[27px] bg-[#626adf] text-white border-solid border-[#626ADF] px-[24px] py-[9.6px] leading-[1.5] rounded-[12px] text-[16px]  font-semibold'>Upload image</button>
+                            <button onClick={handleOpen} className=' min-h-[48px] border h-[27px] bg-[#626adf] text-white border-solid border-[#626ADF] px-[24px] py-[9.6px] leading-[1.5] rounded-[12px] text-[16px]  font-semibold'>Upload image</button>
                         </div>
                     </div>
                     <div className="w-[36%] md:w-[50%] sm:w-[70%] flex items-center justify-center ">
@@ -69,7 +73,7 @@ const ProffetionalPicture = () => {
                         </div>
 
                         <div className=" h-[48px] mt-[40px]">
-                            <button className=' min-h-[48px] border h-[27px] bg-[#626adf] text-white border-solid border-[#626ADF] px-[24px] py-[9.6px] leading-[1.5] rounded-[12px] text-[16px]  font-semibold'>Upload image</button>
+                            <button onClick={handleOpen} className=' min-h-[48px] border h-[27px] bg-[#626adf] text-white border-solid border-[#626ADF] px-[24px] py-[9.6px] leading-[1.5] rounded-[12px] text-[16px]  font-semibold'>Upload image</button>
                         </div>
                     </div>
                     <div className="w-[36%] md:w-[50%] sm:w-[70%] flex items-center justify-center ">
@@ -92,7 +96,7 @@ const ProffetionalPicture = () => {
                         </div>
 
                         <div className=" h-[48px] mt-[40px]">
-                            <button className=' min-h-[48px] border h-[27px] bg-[#626adf] text-white border-solid border-[#626ADF] px-[24px] py-[9.6px] leading-[1.5] rounded-[12px] text-[16px]  font-semibold'>Upload image</button>
+                            <button onClick={handleOpen} className=' min-h-[48px] border h-[27px] bg-[#626adf] text-white border-solid border-[#626ADF] px-[24px] py-[9.6px] leading-[1.5] rounded-[12px] text-[16px]  font-semibold'>Upload image</button>
                         </div>
                     </div>
                     <div className="w-[36%] md:w-[50%] sm:w-[70%] flex items-center justify-center ">

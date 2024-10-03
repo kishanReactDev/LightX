@@ -1,4 +1,5 @@
 
+import { ContextProvider } from "@/contextApi/modalContext";
 import "./globals.css";
 
 
@@ -13,7 +14,9 @@ export default function RootLayout({ children }) {
       <body
         className={` antialiased`}
       >
-        {children}
+        <ContextProvider>
+          {children}
+        </ContextProvider>
       </body>
     </html>
   );
